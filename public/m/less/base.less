@@ -1,0 +1,86 @@
+/* 样式初始化文件 */
+@mainColor:#006699;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+    box-sizing: border-box;
+    /*移动端a标签按住的高亮背景色 设置透明即可*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+li {
+    list-style: none;
+}
+
+
+input {
+    /* 去除输入框的内外边框 */
+    border: 0;
+    outline: 0;
+}
+
+
+img {
+    /* 去掉图片的边框 */
+    border: none;
+    /* 去掉图片底部3px的间距 */
+    vertical-align: middle;
+}
+
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+// 头部公共样式
+
+#header {
+    background-color: @mainColor;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 45px;
+    >h4{
+        margin: 0;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+    }
+    >a{
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        color: #fff;
+    }
+}
+#footer{
+    background-color: @mainColor;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    height: 45px;
+    .mui-row{
+        >div{
+            >a{
+                padding: 3px;
+                text-align: center;
+                display: block;
+                color: #fff;
+                >span{
+                    display: block;
+                    font-size: 12px;
+                }
+                &.active {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
